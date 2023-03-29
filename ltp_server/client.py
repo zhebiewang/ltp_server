@@ -20,8 +20,8 @@ class Client:
         try:
             res = httpx.post(self._base_url + config["route_path"]["sent_split"],
                              json={
-                                "texts": texts
-                             })
+                "texts": texts
+            })
             return res.json()
         except Exception:
             return {
@@ -34,7 +34,7 @@ class Client:
                              json={
                                  "words": words,
                                  "max_window": max_window
-                             })
+            })
             return res.json()
         except Exception:
             return {
@@ -46,7 +46,7 @@ class Client:
             res = httpx.post(self._base_url + config["route_path"]["seg"],
                              json={
                                  "texts": texts
-                             })
+            })
             return res.json()
         except Exception:
             return {
@@ -58,7 +58,7 @@ class Client:
             res = httpx.post(self._base_url + config["route_path"]["pos"],
                              json={
                                  "texts": texts
-                             })
+            })
             return res.json()
         except Exception:
             return {
@@ -70,7 +70,7 @@ class Client:
             res = httpx.post(self._base_url + config["route_path"]["ner"],
                              json={
                                  "texts": texts
-                             })
+            })
             return res.json()
         except Exception:
             return {
@@ -82,7 +82,7 @@ class Client:
             res = httpx.post(self._base_url + config["route_path"]["srl"],
                              json={
                                  "texts": texts
-                             })
+            })
             return res.json()
         except Exception:
             return {
@@ -94,7 +94,7 @@ class Client:
             res = httpx.post(self._base_url + config["route_path"]["dep"],
                              json={
                                  "texts": texts
-                             })
+            })
             return res.json()
         except Exception:
             return {
@@ -106,7 +106,7 @@ class Client:
             res = httpx.post(self._base_url + config["route_path"]["sdp"],
                              json={
                                  "texts": texts
-                             })
+            })
             return res.json()
         except Exception:
             return {
@@ -118,7 +118,19 @@ class Client:
             res = httpx.post(self._base_url + config["route_path"]["sdpg"],
                              json={
                                  "texts": texts
-                             })
+            })
+            return res.json()
+        except Exception:
+            return {
+                "status": 1
+            }
+
+    def all(self, texts: List[str]):
+        try:
+            res = httpx.post(self._base_url + config["route_path"]["all"],
+                             json={
+                                 "texts": texts
+            })
             return res.json()
         except Exception:
             return {

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from ltp_server import Client
+from client import Client
 
 if __name__ == '__main__':
     client = Client()
@@ -13,3 +13,4 @@ if __name__ == '__main__':
     print(client.dep(texts))
     print(client.sdp(texts))
     print(client.sdpg(texts))
+    print(client.all(texts))
