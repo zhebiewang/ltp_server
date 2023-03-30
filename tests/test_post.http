@@ -23,7 +23,7 @@ Content-Type: application/json
 }
 
 ### seg
-POST http://localhost:8000/seg
+POST http://localhost:8000/cws
 Content-Type: application/json
 
 {

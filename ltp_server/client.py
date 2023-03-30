@@ -41,9 +41,9 @@ class Client:
                 "status": 1
             }
 
-    def seg(self, texts: List[str]):
+    def cws(self, texts: List[str]):
         try:
-            res = httpx.post(self._base_url + config["route_path"]["seg"],
+            res = httpx.post(self._base_url + config["route_path"]["cws"],
                              json={
                                  "texts": texts
             })

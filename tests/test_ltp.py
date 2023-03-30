@@ -10,9 +10,9 @@ if __name__ == '__main__':
 
     # texts = ["曹操和司马懿去赶集，中途遇上关羽，一起吃了个饭。"]
 
-    seg, hidden = ltp.seg(texts)
+    cws, hidden = ltp.cws(texts)
 
     pos = ltp.sdp(hidden)
-    print(seg)
-    print([len(sent) for sent in seg])
+    print(cws)
+    print([len(sent) for sent in cws])
     print(pos)
