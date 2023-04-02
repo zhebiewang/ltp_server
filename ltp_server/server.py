@@ -201,7 +201,7 @@ class Server:
                     'desc': 'manager',
                     'password': '123456',
                     'token': 'fakeToken1',
-                    'homePath': '/dashboard/analysis',
+                    'homePath': '/dashboard/workbench',
                     'roles': [
                         {
                             'roleName': 'Super Admin',
@@ -228,7 +228,7 @@ class Server:
                     'desc': 'manager',
                     'password': '123456',
                     'token': 'fakeToken1',
-                    'homePath': '/dashboard/analysis',
+                    'homePath': '/dashboard/workbench',
                     'roles': [
                         {
                             'roleName': 'Super Admin',
